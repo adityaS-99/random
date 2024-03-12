@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --first-color: hsl(222, 80%, 58%);
+  --dark-color: hsl(222, 24%, 8%);
+  --title-color: hsl(222, 8%, 8%);
+  --text-color-light: hsl(222, 8%, 65%);
+  --white-color: #fff;
+  --body-color: hsl(222, 100%, 99%);
+  --body-font: "Poppins", sans-serif;
+  --small-font-size: .813rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--body-color);
+  position: relative;
+}
+
+h1 {
+  font-family: '3ds', sans-serif;
+  font-size: 2em; 
+}
+
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
+
+
+.svg-container {
+
+  width: 100%;
+  height: 100%;
+  fill: #000;
+  position: relative;
+  top: 0px;
+  right: 0px;
+
+}
+
+.svg-container{
+  float: right;
+}
+
+
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+
+
+.minimize {
+  cursor: pointer;
+  margin-left:auto;
+}
+
+
+.dark .minimize {
+  color: white;
+}
+
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+  background-color: #ffffff;
+
+}
+
+.options {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  margin: 0.5rem 0;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+
+
+
+
+
+.minimize {
+  height: 100%;
+  width: 30px; 
+  background: url('https://icons8.com/icon/23538/minimize-window') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.minimize:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.code-box {
+  width:80%;
+  max-width: 800px;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  overflow: auto;
+  padding: 20px;
+  border: 2px solid #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+pre {
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.clean, .copy {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.clean:hover, .copy:hover {
+  transform: scale(1.05);
+}
+
+.clean {
+  background-color: #003c5a;
+  color: #181717;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid rgb(82, 100, 201);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #000000; 
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.clean:hover {
+  background: #005686;
+  color: #ffffff;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.clean:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.copy {
+  background-color: #f8f5f5;
+  color: #080808;
+}
+
+
+.code-box::-webkit-scrollbar {
+  width: 12px;
+}
+
+.code-box::-webkit-scrollbar-track {
+  background-color: #2e2e2e;
+  border-radius: 10px;
+}
+
+.code-box::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  border-radius: 10px;
+}
+
+.settings-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+  animation: floatIcon 2s ease infinite alternate;
+}
+
+.settings-icon ion-icon {
+  font-size: 30px;
+  color: #333;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes openCodeBoxAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.code-box.open,
+.button-container.open {
+  animation: openCodeBoxAnimation 1s forwards;
+}

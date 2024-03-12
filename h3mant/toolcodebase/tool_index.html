@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Box</title>
+  <link rel="stylesheet" href="tool_style.css">
+  <script src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons.js"></script>
+  <script src="tool_script.js" defer></script>
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      let preElement = document.getElementById('pre');
+      let lines = preElement.innerText.split('\n');
+      preElement.innerText = "";
+
+      let index = 0;
+      let interval = setInterval(function () {
+        if (index < lines.length) {
+          preElement.innerText += lines[index] + '\n';
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 100); 
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="options">
+      <h1>Proxy-Tool</h1>
+      <span class="minimize" id="mini">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
+        </svg>
+      </span>
+     
+  
+     
+    
+      <div class="svg-container" id="cross">
+        <?xml version="1.0" ?><svg height="30" viewBox="0 0 48 48" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+      </div>
+
+     
+      
+    </div>
+
+
+
+    <style>
+      
+      .svg-container {
+        height: 30px;
+        width: 50px;
+      }
+    </style>
+    <div class="code-box" id="code-box">
+      <pre id="pre">[
+        '{{repeat(5, 7)}}',
+        {
+          
+      },
+      {
+          "name": "Katelyn Hermiston",
+          "info": {
+              "title": "Miss",
+              "age": 48,
+              "phone": "1-590-930-0998",
+              "email": "lonny.kling@yahoo.com"
+          }
+      },
+      {
+          "name": "Cedrick Connelly",
+          "info": {
+              "title": "Dr.",
+              "age": 44,
+              "phone": "(965) 527-7100",
+              "email": "darion.davis@yahoo.com"
+          }
+      },
+      {
+          "name": "Eladio Ritchie",
+          "info": {
+              "title": "Mr.",
+              "age": 51,
+              "phone": "+17124262163",
+              "email": "prince.barrows@hotmail.com"
+          }
+      },
+      {
+          "name": "Kavon Powlowski",
+          "info": {
+              "title": "Mr.",
+              "age": 50,
+              "phone": "260.921.2579 x415",
+              "email": "altenwerth.mireya@yahoo.com"
+          }
+      },
+      {
+          "name": "Karine Corwin",
+          "info": {
+              "title": "Mr.",
+              "age": 42,
+              "phone": "1-752-755-6364 x704",
+              "email": "hkemmer@yahoo.com"
+          }
+      },
+      {
+          "name": "April Douglas",
+          "info": {
+              "title": "Dr.",
+              "age": 47,
+              "phone": "(818) 976-8633",
+              "email": "sschaefer@gmail.com"
+          }
+      }
+  ]
+  {
+    "kind": "youtube#searchListResponse",
+    "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/PaiEDiVxOyCWelLPuuwa9LKz3Gk\"",
+    "nextPageToken": "CAUQAA",
+    "regionCode": "KE",
+    "pageInfo": {
+      "totalResults": 4249,
+      "resultsPerPage": 5
+    },
+    "items": [
+      {
+        "kind": "youtube#searchResult",
+        "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/QpOIr3QKlV5EUlzfFcVvDiJT0hw\"",
+        "id": {
+          "kind": "youtube#channel",
+          "channelId": "UCJowOS1R0FnhipXVqEnYU1A"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/AWutzVOt_5p1iLVifyBdfoSTf9E\"",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "Eqa2nAAhHN0"
+        }
+      },
+      {
+        "kind": "youtube#searchResult",
+        "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/2dIR9BTfr7QphpBuY3hPU-h5u-4\"",
+        "id": {
+          "kind": "youtube#video",
+          "videoId": "IirngItQuVs"
+        }
+      }
+    ]
+  }
+{
+  "className":"Class 2B",
+  "year":2022,
+  "phoneNumber":null,
+  "active":true,
+  "homeroomTeacher":{"firstName":"Richard", "lastName":"Roe"},
+  "members":[{
+      "firstName":"Jane","lastName":"Doe"},
+      {"firstName":"Jinny","lastName":"Roe"},
+      {"firstName":"Johnny","lastName":"Roe"},
+      ]
+}
+
+
+
+
+</pre>
+    </div>
+    <div class="button-container" id="buttons-container">
+      <button class="clean" onclick="clearCode()">Clear Code</button>
+      <button class="copy" onclick="copyCode()">Copy Code</button>
+    </div>
+  </div>
+</body>
+</html>
